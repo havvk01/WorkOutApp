@@ -13,7 +13,7 @@ class BaseView: UIView {
 
         addViews()
         layoutViews()
-        configure()
+        configureView()
     }
     
     
@@ -28,5 +28,5 @@ class BaseView: UIView {
     
     func layoutViews() {}
     
-    func configure() {}
+    func configureView() {}
 }
