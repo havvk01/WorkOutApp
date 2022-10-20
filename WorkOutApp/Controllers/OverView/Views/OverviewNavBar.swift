@@ -19,7 +19,7 @@ final class OverviewNavBar: BaseView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        addButtonBorder(with: Resourses.Colors.separator, height: 1)
+        addButtonBorder(with: R.Colors.separator, height: 1)
     }
     
     func addAllWorkoutsAction(_ action: Selector, with target: Any?) {
@@ -32,17 +32,17 @@ final class OverviewNavBar: BaseView {
 }
 
 extension OverviewNavBar {
-    override func addViews() {
-        super.addViews()
+    override func setupViews() {
+        super.setupViews()
         
-        addView(titleLabel)
-        addView(addButton)
-        addView(allWorkOutButton)
-        addView(weekView)
+        setupView(titleLabel)
+        setupView(addButton)
+        setupView(allWorkOutButton)
+        setupView(weekView)
     }
     
-    override func layoutViews() {
-        super.layoutViews()
+    override func constaintViews() {
+        super.constaintViews()
         
         NSLayoutConstraint.activate([
             addButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8),
@@ -69,18 +69,18 @@ extension OverviewNavBar {
         ])
     }
     
-    override func configureView() {
-        super.configureView()
+    override func configureApperance() {
+        super.configureApperance()
         backgroundColor = .white
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = Resourses.Strings.NavBar.overview
-        titleLabel.textColor = Resourses.Colors.titleGray
-        titleLabel.font = Resourses.Fonts.helveticaRegular(witch: 22)
+        titleLabel.text = R.Strings.NavBar.overview
+        titleLabel.textColor = R.Colors.titleGray
+        titleLabel.font = R.Fonts.helveticaRegular(witch: 22)
         
-        allWorkOutButton.setTitle(Resourses.Strings.OverView.allWorkOutButton)
+        allWorkOutButton.setTitle(R.Strings.OverView.allWorkOutButton)
      
-        addButton.setImage(Resourses.Images.Common.add, for: .normal)
+        addButton.setImage(R.Images.Common.add, for: .normal)
         
     }
 }

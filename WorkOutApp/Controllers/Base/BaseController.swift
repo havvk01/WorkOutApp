@@ -17,21 +17,21 @@ class BaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addViews()
-        layoutViews()
-        configure()
+        setupViews()
+        constaintViews()
+        configureApperance()
     }
 }
 
 @objc extension BaseController {
     
-    func addViews() {
+    func setupViews() {
         
     }
     
-    func layoutViews() {}
-    func configure() {
-        view.backgroundColor = Resourses.Colors.background
+    func constaintViews() {}
+    func configureApperance() {
+        view.backgroundColor = R.Colors.background
     }
     
     func navBarLeftButtonHandler() {
@@ -47,9 +47,9 @@ extension BaseController {
     func addNavBarButton(at posititon: NavBarPosition, with title: String) {
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)
-        button.setTitleColor(Resourses.Colors.active, for: .normal)
-        button.setTitleColor(Resourses.Colors.inActive, for: .disabled)
-        button.titleLabel?.font = Resourses.Fonts.helveticaRegular(witch: 17)
+        button.setTitleColor(R.Colors.active, for: .normal)
+        button.setTitleColor(R.Colors.inActive, for: .disabled)
+        button.titleLabel?.font = R.Fonts.helveticaRegular(witch: 17)
         
         switch posititon {
         case .left:

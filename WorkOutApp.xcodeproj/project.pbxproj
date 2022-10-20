@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B498F6C28E9B23D007E15B6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F6B28E9B23D007E15B6 /* TabBarController.swift */; };
 		0B498F6F28E9B303007E15B6 /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F6E28E9B303007E15B6 /* UIColor + ext.swift */; };
-		0B498F7228E9B4CD007E15B6 /* Resourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7128E9B4CD007E15B6 /* Resourses.swift */; };
+		0B498F7228E9B4CD007E15B6 /* Resouces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7128E9B4CD007E15B6 /* Resouces.swift */; };
 		0B498F7428E9C9F9007E15B6 /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7328E9C9F9007E15B6 /* NavBarController.swift */; };
 		0B498F7728E9CB6E007E15B6 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7628E9CB6E007E15B6 /* BaseController.swift */; };
 		0B498F7928E9CD15007E15B6 /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7828E9CD15007E15B6 /* UIView + ext.swift */; };
@@ -27,12 +27,13 @@
 		0B89AFB628E9AFCD00AA3326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B89AFB528E9AFCD00AA3326 /* Assets.xcassets */; };
 		0B89AFB928E9AFCD00AA3326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B89AFB728E9AFCD00AA3326 /* LaunchScreen.storyboard */; };
 		0BE57AE828EF518B003D6EE3 /* Date + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE57AE728EF518B003D6EE3 /* Date + ext.swift */; };
+		0BE878982901419D00BDB4C0 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE878972901419D00BDB4C0 /* BaseInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B498F6B28E9B23D007E15B6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0B498F6E28E9B303007E15B6 /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
-		0B498F7128E9B4CD007E15B6 /* Resourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourses.swift; sourceTree = "<group>"; };
+		0B498F7128E9B4CD007E15B6 /* Resouces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resouces.swift; sourceTree = "<group>"; };
 		0B498F7328E9C9F9007E15B6 /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		0B498F7628E9CB6E007E15B6 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		0B498F7828E9CD15007E15B6 /* UIView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		0B89AFB828E9AFCD00AA3326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B89AFBA28E9AFCD00AA3326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BE57AE728EF518B003D6EE3 /* Date + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + ext.swift"; sourceTree = "<group>"; };
+		0BE878972901419D00BDB4C0 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				0B498F7028E9B30B007E15B6 /* Extensions */,
-				0B498F7128E9B4CD007E15B6 /* Resourses.swift */,
+				0B498F7128E9B4CD007E15B6 /* Resouces.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -87,10 +89,11 @@
 		0B498F7528E9CB57007E15B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0BE8789529013AB400BDB4C0 /* Navigation */,
+				0B498F7B28E9D0C6007E15B6 /* OverView */,
 				0B498F7E28E9D0DA007E15B6 /* Settings */,
 				0B498F7D28E9D0D4007E15B6 /* Progress */,
 				0B498F7C28E9D0CE007E15B6 /* Session */,
-				0B498F7B28E9D0C6007E15B6 /* OverView */,
 				0B498F7A28E9D0B6007E15B6 /* Base */,
 			);
 			path = Controllers;
@@ -99,10 +102,8 @@
 		0B498F7A28E9D0B6007E15B6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				0B498F6B28E9B23D007E15B6 /* TabBarController.swift */,
-				0B498F7328E9C9F9007E15B6 /* NavBarController.swift */,
+				0BE878962901417F00BDB4C0 /*  Views */,
 				0B498F7628E9CB6E007E15B6 /* BaseController.swift */,
-				0B498F8A28ECA25B007E15B6 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -205,6 +206,24 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		0BE8789529013AB400BDB4C0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0B498F6B28E9B23D007E15B6 /* TabBarController.swift */,
+				0B498F7328E9C9F9007E15B6 /* NavBarController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		0BE878962901417F00BDB4C0 /*  Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B498F8A28ECA25B007E15B6 /* BaseView.swift */,
+				0BE878972901419D00BDB4C0 /* BaseInfoView.swift */,
+			);
+			path = " Views";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,8 +305,9 @@
 				0B498F8028E9D0F4007E15B6 /* SessionController.swift in Sources */,
 				0B498F8728E9D725007E15B6 /* SecondaryButton.swift in Sources */,
 				0B498F8228E9D126007E15B6 /* ProgressController.swift in Sources */,
+				0BE878982901419D00BDB4C0 /* BaseInfoView.swift in Sources */,
 				0B498F7428E9C9F9007E15B6 /* NavBarController.swift in Sources */,
-				0B498F7228E9B4CD007E15B6 /* Resourses.swift in Sources */,
+				0B498F7228E9B4CD007E15B6 /* Resouces.swift in Sources */,
 				0B498F6F28E9B303007E15B6 /* UIColor + ext.swift in Sources */,
 				0B498F8B28ECA25B007E15B6 /* BaseView.swift in Sources */,
 				0B498F9028EF4894007E15B6 /* WeekdayView.swift in Sources */,

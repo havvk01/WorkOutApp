@@ -12,7 +12,7 @@ class SettingsController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        title = Resourses.Strings.NavBar.settings
+        title = R.Strings.NavBar.settings
     }
 
 
