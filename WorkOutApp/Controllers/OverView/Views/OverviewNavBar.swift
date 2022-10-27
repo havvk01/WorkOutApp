@@ -9,9 +9,25 @@ import UIKit
 
 final class OverviewNavBar: BaseView {
     
-    private let titleLabel = UILabel()
-    private let allWorkOutButton = SecondaryButton()
-    private let addButton = UIButton()
+    private let titleLabel: UILabel = {
+        let lable = UILabel()
+        lable.text = R.Strings.NavBar.overview
+        lable.textColor = R.Colors.titleGray
+        lable.font = R.Fonts.helveticaRegular(witch: 22)
+        return lable
+    }()
+    
+    private let allWorkOutButton: WAButton = {
+       let button = WAButton(with: .secondary)
+        button.setTitle(R.Strings.OverView.allWorkOutButton )
+        return button
+    }()
+    
+    private let addButton: UIButton = {
+        let button = UIButton()
+        button.setImage(R.Images.Common.add, for: .normal)
+        return button
+    }()
     
     
     private let weekView = WeekView()
@@ -53,7 +69,7 @@ extension OverviewNavBar {
             allWorkOutButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             allWorkOutButton.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -15),
             allWorkOutButton.heightAnchor.constraint(equalToConstant: 28),
-            allWorkOutButton.widthAnchor.constraint(equalToConstant: 130),
+//            allWorkOutButton.widthAnchor.constraint(equalToConstant: 130),
             
             titleLabel.centerYAnchor.constraint(equalTo: addButton.centerYAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: allWorkOutButton.leadingAnchor),
@@ -73,15 +89,7 @@ extension OverviewNavBar {
         super.configureApperance()
         backgroundColor = .white
         
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = R.Strings.NavBar.overview
-        titleLabel.textColor = R.Colors.titleGray
-        titleLabel.font = R.Fonts.helveticaRegular(witch: 22)
-        
-        allWorkOutButton.setTitle(R.Strings.OverView.allWorkOutButton)
-     
-        addButton.setImage(R.Images.Common.add, for: .normal)
-        
+//        titleLabel.translatesAutoresizingMaskIntoConstraints = false
     }
 }
 

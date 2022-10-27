@@ -16,7 +16,7 @@
 		0B498F8028E9D0F4007E15B6 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7F28E9D0F4007E15B6 /* SessionController.swift */; };
 		0B498F8228E9D126007E15B6 /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8128E9D126007E15B6 /* ProgressController.swift */; };
 		0B498F8428E9D13A007E15B6 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8328E9D13A007E15B6 /* SettingsController.swift */; };
-		0B498F8728E9D725007E15B6 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8628E9D725007E15B6 /* SecondaryButton.swift */; };
+		0B498F8728E9D725007E15B6 /* WAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8628E9D725007E15B6 /* WAButton.swift */; };
 		0B498F8928ECA224007E15B6 /* OverviewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8828ECA224007E15B6 /* OverviewNavBar.swift */; };
 		0B498F8B28ECA25B007E15B6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8A28ECA25B007E15B6 /* BaseView.swift */; };
 		0B498F8E28EF46A8007E15B6 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8D28EF46A8007E15B6 /* WeekView.swift */; };
@@ -27,7 +27,7 @@
 		0B89AFB628E9AFCD00AA3326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B89AFB528E9AFCD00AA3326 /* Assets.xcassets */; };
 		0B89AFB928E9AFCD00AA3326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B89AFB728E9AFCD00AA3326 /* LaunchScreen.storyboard */; };
 		0BE57AE828EF518B003D6EE3 /* Date + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE57AE728EF518B003D6EE3 /* Date + ext.swift */; };
-		0BE878982901419D00BDB4C0 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE878972901419D00BDB4C0 /* BaseInfoView.swift */; };
+		0BE878982901419D00BDB4C0 /* WABaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE878972901419D00BDB4C0 /* WABaseInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 		0B498F7F28E9D0F4007E15B6 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		0B498F8128E9D126007E15B6 /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
 		0B498F8328E9D13A007E15B6 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
-		0B498F8628E9D725007E15B6 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		0B498F8628E9D725007E15B6 /* WAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAButton.swift; sourceTree = "<group>"; };
 		0B498F8828ECA224007E15B6 /* OverviewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNavBar.swift; sourceTree = "<group>"; };
 		0B498F8A28ECA25B007E15B6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0B498F8D28EF46A8007E15B6 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		0B89AFB828E9AFCD00AA3326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B89AFBA28E9AFCD00AA3326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BE57AE728EF518B003D6EE3 /* Date + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + ext.swift"; sourceTree = "<group>"; };
-		0BE878972901419D00BDB4C0 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
+		0BE878972901419D00BDB4C0 /* WABaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,7 @@
 			children = (
 				0BE878962901417F00BDB4C0 /*  Views */,
 				0B498F7628E9CB6E007E15B6 /* BaseController.swift */,
+				0B498F8628E9D725007E15B6 /* WAButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -145,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				0B498F8C28EF4682007E15B6 /* WeekView */,
-				0B498F8628E9D725007E15B6 /* SecondaryButton.swift */,
 				0B498F8828ECA224007E15B6 /* OverviewNavBar.swift */,
 			);
 			path = Views;
@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				0B498F8A28ECA25B007E15B6 /* BaseView.swift */,
-				0BE878972901419D00BDB4C0 /* BaseInfoView.swift */,
+				0BE878972901419D00BDB4C0 /* WABaseInfoView.swift */,
 			);
 			path = " Views";
 			sourceTree = "<group>";
@@ -303,9 +303,9 @@
 				0B498F6C28E9B23D007E15B6 /* TabBarController.swift in Sources */,
 				0B89AFAD28E9AFCA00AA3326 /* AppDelegate.swift in Sources */,
 				0B498F8028E9D0F4007E15B6 /* SessionController.swift in Sources */,
-				0B498F8728E9D725007E15B6 /* SecondaryButton.swift in Sources */,
+				0B498F8728E9D725007E15B6 /* WAButton.swift in Sources */,
 				0B498F8228E9D126007E15B6 /* ProgressController.swift in Sources */,
-				0BE878982901419D00BDB4C0 /* BaseInfoView.swift in Sources */,
+				0BE878982901419D00BDB4C0 /* WABaseInfoView.swift in Sources */,
 				0B498F7428E9C9F9007E15B6 /* NavBarController.swift in Sources */,
 				0B498F7228E9B4CD007E15B6 /* Resouces.swift in Sources */,
 				0B498F6F28E9B303007E15B6 /* UIColor + ext.swift in Sources */,
