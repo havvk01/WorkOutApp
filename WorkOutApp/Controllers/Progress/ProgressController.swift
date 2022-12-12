@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProgressController: BaseController {
+class ProgressController: WABaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,8 @@ class ProgressController: BaseController {
         
         addNavBarButton(at: .left, with: "Export")
         addNavBarButton(at: .right, with: "Details")
+
+        
     }
 
 }

@@ -9,14 +9,14 @@ import UIKit
 
 enum R {
     enum Colors {
-        static var active = UIColor(hexString: "#437BFE")
-        static var inActive = UIColor(hexString: "#929DA5")
+        static let active = UIColor(hexString: "#437BFE")
+        static let inActive = UIColor(hexString: "#929DA5")
         
-        static var background  = UIColor(hexString: "#F8F9F9")
-        static var separator = UIColor(hexString: "#E8ECEF")
-        static var secondary = UIColor(hexString: "#F0F3FF")
+        static let background  = UIColor(hexString: "#F8F9F9")
+        static let separator = UIColor(hexString: "#E8ECEF")
+        static let secondary = UIColor(hexString: "#F0F3FF")
         
-        static var titleGray = UIColor(hexString: "#545C77")
+        static let titleGray = UIColor(hexString: "#545C77")
     }
     
     enum Strings {
@@ -42,7 +42,7 @@ enum R {
         }
         
         enum Session {
-            static let navBarStart = "Start"
+            static let navBarStart = "Start     "
             static let navBarPause = "Pause"
             static let navBarFinish = "Finish"
 

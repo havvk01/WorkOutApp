@@ -12,7 +12,7 @@ enum NavBarPosition {
     case right
 }
 
-class BaseController: UIViewController {
+class WABaseController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class BaseController: UIViewController {
     }
 }
 
-@objc extension BaseController {
+@objc extension WABaseController {
     
     func setupViews() {
         
@@ -43,7 +43,8 @@ class BaseController: UIViewController {
     }
 }
 
-extension BaseController {
+extension WABaseController {
+    
     func addNavBarButton(at posititon: NavBarPosition, with title: String) {
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)
@@ -53,11 +54,21 @@ extension BaseController {
         
         switch posititon {
         case .left:
-            button.addTarget(self, action: #selector(navBarLeftButtonHandler), for: .touchUpInside)
+            button.addTarget(self, action:  #selector(navBarLeftButtonHandler), for: .touchUpInside)
             navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
         case .right:
-            button.addTarget(self, action: #selector(navBarRightButtonHandler), for: .touchUpInside)
+            button.addTarget(self, action:  #selector(navBarRightButtonHandler), for: .touchUpInside)
             navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
         }
+    }
+    
+    func setTitleForNavBarButton(_ title: String, at posititon: NavBarPosition) {     
+        switch posititon {
+        case .left:
+            (navigationItem.leftBarButtonItem?.customView as? UIButton)?.setTitle(title, for: .normal)
+        case .right:
+            (navigationItem.rightBarButtonItem?.customView as? UIButton)?.setTitle(title, for: .normal)
+        }
+
     }
 }

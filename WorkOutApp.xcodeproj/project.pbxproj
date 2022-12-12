@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3732812941057000FF73AB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3732802941057000FF73AB /* TimerView.swift */; };
+		0B3732842941064600FF73AB /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3732832941064600FF73AB /* ProgressView.swift */; };
 		0B498F6C28E9B23D007E15B6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F6B28E9B23D007E15B6 /* TabBarController.swift */; };
 		0B498F6F28E9B303007E15B6 /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F6E28E9B303007E15B6 /* UIColor + ext.swift */; };
 		0B498F7228E9B4CD007E15B6 /* Resouces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7128E9B4CD007E15B6 /* Resouces.swift */; };
 		0B498F7428E9C9F9007E15B6 /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7328E9C9F9007E15B6 /* NavBarController.swift */; };
-		0B498F7728E9CB6E007E15B6 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7628E9CB6E007E15B6 /* BaseController.swift */; };
+		0B498F7728E9CB6E007E15B6 /* WABaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7628E9CB6E007E15B6 /* WABaseController.swift */; };
 		0B498F7928E9CD15007E15B6 /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7828E9CD15007E15B6 /* UIView + ext.swift */; };
 		0B498F8028E9D0F4007E15B6 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F7F28E9D0F4007E15B6 /* SessionController.swift */; };
 		0B498F8228E9D126007E15B6 /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8128E9D126007E15B6 /* ProgressController.swift */; };
@@ -31,11 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3732802941057000FF73AB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		0B3732832941064600FF73AB /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		0B498F6B28E9B23D007E15B6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0B498F6E28E9B303007E15B6 /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
 		0B498F7128E9B4CD007E15B6 /* Resouces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resouces.swift; sourceTree = "<group>"; };
 		0B498F7328E9C9F9007E15B6 /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
-		0B498F7628E9CB6E007E15B6 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		0B498F7628E9CB6E007E15B6 /* WABaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseController.swift; sourceTree = "<group>"; };
 		0B498F7828E9CD15007E15B6 /* UIView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
 		0B498F7F28E9D0F4007E15B6 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		0B498F8128E9D126007E15B6 /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B37327F2941055900FF73AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B3732822941061800FF73AB /* Timer */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B3732822941061800FF73AB /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				0B3732802941057000FF73AB /* TimerView.swift */,
+				0B3732832941064600FF73AB /* ProgressView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		0B498F6D28E9B2DC007E15B6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				0BE878962901417F00BDB4C0 /*  Views */,
-				0B498F7628E9CB6E007E15B6 /* BaseController.swift */,
+				0B498F7628E9CB6E007E15B6 /* WABaseController.swift */,
 				0B498F8628E9D725007E15B6 /* WAButton.swift */,
 			);
 			path = Base;
@@ -121,6 +142,7 @@
 		0B498F7C28E9D0CE007E15B6 /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				0B37327F2941055900FF73AB /* Views */,
 				0B498F7F28E9D0F4007E15B6 /* SessionController.swift */,
 			);
 			path = Session;
@@ -304,6 +326,8 @@
 				0B89AFAD28E9AFCA00AA3326 /* AppDelegate.swift in Sources */,
 				0B498F8028E9D0F4007E15B6 /* SessionController.swift in Sources */,
 				0B498F8728E9D725007E15B6 /* WAButton.swift in Sources */,
+				0B3732812941057000FF73AB /* TimerView.swift in Sources */,
+				0B3732842941064600FF73AB /* ProgressView.swift in Sources */,
 				0B498F8228E9D126007E15B6 /* ProgressController.swift in Sources */,
 				0BE878982901419D00BDB4C0 /* WABaseInfoView.swift in Sources */,
 				0B498F7428E9C9F9007E15B6 /* NavBarController.swift in Sources */,
@@ -311,7 +335,7 @@
 				0B498F6F28E9B303007E15B6 /* UIColor + ext.swift in Sources */,
 				0B498F8B28ECA25B007E15B6 /* BaseView.swift in Sources */,
 				0B498F9028EF4894007E15B6 /* WeekdayView.swift in Sources */,
-				0B498F7728E9CB6E007E15B6 /* BaseController.swift in Sources */,
+				0B498F7728E9CB6E007E15B6 /* WABaseController.swift in Sources */,
 				0B89AFAF28E9AFCA00AA3326 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
