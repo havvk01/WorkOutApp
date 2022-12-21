@@ -10,14 +10,18 @@ import UIKit
 class SessionController: WABaseController {
     private let timerView = TimerView()
     
-    private let timerDuration = 2.0
+    private let statsView = StatsView(with: R.Strings.Session.workoutStats)
+    private let stepsView = WABaseInfoView(with: R.Strings.Session.stepsCounter
+    )
+    
+    private let timerDuration = 5.0
     
     //WABaseInfoView = {
-//        let view = TimerView()
-        //WABaseInfoView(with: "Test", buttonTitle: "TestButton".uppercased())
-//
-//        return view
-//    }()
+    //        let view = TimerView()
+    //WABaseInfoView(with: "Test", buttonTitle: "TestButton".uppercased())
+    //
+    //        return view
+    //    }()
     
     override func navBarLeftButtonHandler() {
         if timerView.state == .isStopped{
@@ -49,6 +53,8 @@ extension SessionController {
         super.setupViews()
         
         view.setupView(timerView)
+        view.setupView(statsView)
+        view.setupView(stepsView)
     }
     
     override func constaintViews() {
@@ -58,7 +64,18 @@ extension SessionController {
             timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-//            timerView.heightAnchor.constraint(equalToConstant: 500)
+            //            timerView.heightAnchor.constraint(equalToConstant: 500)
+            
+            statsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            statsView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 10),
+            statsView.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -7.5),
+            //            statsView.heightAnchor.constraint(equalToConstant: 200),
+            
+            stepsView.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 7.5),
+            stepsView.topAnchor.constraint(equalTo: statsView.topAnchor),
+            stepsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            stepsView.heightAnchor.constraint(equalTo: statsView.heightAnchor)
+            
         ])
     }
     
@@ -68,7 +85,7 @@ extension SessionController {
         title = R.Strings.NavBar.session
         navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: .session)
         
-
+        
         addNavBarButton(at: .left, with: R.Strings.Session.navBarStart)
         addNavBarButton(at: .right, with: R.Strings.Session.navBarFinish)
         
@@ -80,5 +97,10 @@ extension SessionController {
                 print(progress)
             }
         }
+        
+        statsView.configure(with: [.heartRate(value: "155"),
+                                   .averagePace(value: "8'20''"),
+                                   .totalSteps(value: "7,682"),
+                                   .totalDistance(value: "8.25")])
     }
 }

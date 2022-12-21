@@ -24,6 +24,8 @@
 		0B498F8E28EF46A8007E15B6 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8D28EF46A8007E15B6 /* WeekView.swift */; };
 		0B498F9028EF4894007E15B6 /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B498F8F28EF4894007E15B6 /* WeekdayView.swift */; };
 		0B5F737A294B93800028C671 /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F7379294B93800028C671 /* PercentView.swift */; };
+		0B5F737E2950E1DA0028C671 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F737D2950E1DA0028C671 /* StatsView.swift */; };
+		0B5F73812950E2250028C671 /* StatsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F73802950E2250028C671 /* StatsItemView.swift */; };
 		0B89AFAD28E9AFCA00AA3326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B89AFAC28E9AFCA00AA3326 /* AppDelegate.swift */; };
 		0B89AFAF28E9AFCA00AA3326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B89AFAE28E9AFCA00AA3326 /* SceneDelegate.swift */; };
 		0B89AFB128E9AFCA00AA3326 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B89AFB028E9AFCA00AA3326 /* OverviewController.swift */; };
@@ -51,6 +53,8 @@
 		0B498F8D28EF46A8007E15B6 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		0B498F8F28EF4894007E15B6 /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
 		0B5F7379294B93800028C671 /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
+		0B5F737D2950E1DA0028C671 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		0B5F73802950E2250028C671 /* StatsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsItemView.swift; sourceTree = "<group>"; };
 		0B89AFA928E9AFCA00AA3326 /* WorkOutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkOutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B89AFAC28E9AFCA00AA3326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B89AFAE28E9AFCA00AA3326 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				0B3732822941061800FF73AB /* Timer */,
+				0B5F737B2950DFD20028C671 /* Stats */,
+				0B5F737C2950DFDB0028C671 /* Steps */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +189,30 @@
 				0B498F8F28EF4894007E15B6 /* WeekdayView.swift */,
 			);
 			path = WeekView;
+			sourceTree = "<group>";
+		};
+		0B5F737B2950DFD20028C671 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				0B5F737F2950E2060028C671 /* Views */,
+				0B5F737D2950E1DA0028C671 /* StatsView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		0B5F737C2950DFDB0028C671 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		0B5F737F2950E2060028C671 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B5F73802950E2250028C671 /* StatsItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0B89AFA028E9AFCA00AA3326 = {
@@ -334,11 +364,13 @@
 				0B498F8228E9D126007E15B6 /* ProgressController.swift in Sources */,
 				0BE878982901419D00BDB4C0 /* WABaseInfoView.swift in Sources */,
 				0B498F7428E9C9F9007E15B6 /* NavBarController.swift in Sources */,
+				0B5F73812950E2250028C671 /* StatsItemView.swift in Sources */,
 				0B498F7228E9B4CD007E15B6 /* Resouces.swift in Sources */,
 				0B5F737A294B93800028C671 /* PercentView.swift in Sources */,
 				0B498F6F28E9B303007E15B6 /* UIColor + ext.swift in Sources */,
 				0B498F8B28ECA25B007E15B6 /* WABaseView.swift in Sources */,
 				0B498F9028EF4894007E15B6 /* WeekdayView.swift in Sources */,
+				0B5F737E2950E1DA0028C671 /* StatsView.swift in Sources */,
 				0B498F7728E9CB6E007E15B6 /* WABaseController.swift in Sources */,
 				0B89AFAF28E9AFCA00AA3326 /* SceneDelegate.swift in Sources */,
 			);

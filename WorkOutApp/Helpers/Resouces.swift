@@ -89,6 +89,16 @@ enum R {
         static var downArrow = UIImage(named: "down_arrow")
         static var add = UIImage(named: "add_button")
         }
+        
+        enum Session {
+            enum Stats {
+                static var averagePace = UIImage(named: "stats_averagePace")
+                static var heartRate = UIImage(named: "stats_heartRate")
+                static var totalDistance = UIImage(named: "stats_totalDistance")
+                static var totalSteps = UIImage(named: "stats_totalSteps")
+            }            
+        }
+        
     }
     
     enum Fonts {
