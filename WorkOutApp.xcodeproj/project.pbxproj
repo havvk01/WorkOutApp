@@ -36,6 +36,7 @@
 		0B89AFB928E9AFCD00AA3326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B89AFB728E9AFCD00AA3326 /* LaunchScreen.storyboard */; };
 		0BE57AE828EF518B003D6EE3 /* Date + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE57AE728EF518B003D6EE3 /* Date + ext.swift */; };
 		0BE878982901419D00BDB4C0 /* WABaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE878972901419D00BDB4C0 /* WABaseInfoView.swift */; };
+		0BEF62D62954993D0093054F /* DailyPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF62D52954993D0093054F /* DailyPerformanceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		0B89AFBA28E9AFCD00AA3326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BE57AE728EF518B003D6EE3 /* Date + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + ext.swift"; sourceTree = "<group>"; };
 		0BE878972901419D00BDB4C0 /* WABaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseInfoView.swift; sourceTree = "<group>"; };
+		0BEF62D52954993D0093054F /* DailyPerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPerformanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		0B498F7D28E9D0D4007E15B6 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
+				0BEF62D32954991B0093054F /* Views */,
 				0B498F8128E9D126007E15B6 /* ProgressController.swift */,
 			);
 			path = Progress;
@@ -304,6 +307,22 @@
 			path = " Views";
 			sourceTree = "<group>";
 		};
+		0BEF62D32954991B0093054F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BEF62D4295499230093054F /* Performance */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BEF62D4295499230093054F /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				0BEF62D52954993D0093054F /* DailyPerformanceView.swift */,
+			);
+			path = Performance;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -391,6 +410,7 @@
 				0B498F8228E9D126007E15B6 /* ProgressController.swift in Sources */,
 				0B5F7383295394170028C671 /* StepsView.swift in Sources */,
 				0BE878982901419D00BDB4C0 /* WABaseInfoView.swift in Sources */,
+				0BEF62D62954993D0093054F /* DailyPerformanceView.swift in Sources */,
 				0B498F7428E9C9F9007E15B6 /* NavBarController.swift in Sources */,
 				0B5F73812950E2250028C671 /* StatsItemView.swift in Sources */,
 				0B498F7228E9B4CD007E15B6 /* Resouces.swift in Sources */,
