@@ -67,6 +67,9 @@ enum R {
             
             static let dailyPerfomance = "Daily Perfomance"
             static let last7Days = "Last 7 days"
+            
+            static let monthlyPerfomance = "Monthly Perfomance"
+            static let last10Months = "Last 10 months"
         }
         
         enum Settings {

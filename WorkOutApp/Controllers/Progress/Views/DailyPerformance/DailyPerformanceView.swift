@@ -1,5 +1,5 @@
 //
-//  performanceView.swift
+//  DailyPerformanceView.swift
 //  WorkOutApp
 //
 //  Created by Slava Havvk on 22.12.2022.
