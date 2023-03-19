@@ -11,7 +11,7 @@ final class MonthlyPerformanceView: WABaseInfoView {
     private let chartsView = WAChartsView()
     
     func configure(with items: [WAChartsView.Data]) {
-//        barsView.configure(with: items)
+        chartsView.configure(with: items)
     }
 
 }
@@ -37,8 +37,6 @@ extension MonthlyPerformanceView {
     
     override func configureApperance() {
         super.configureApperance()
-        
-        chartsView.backgroundColor = .red
     }
     
 }

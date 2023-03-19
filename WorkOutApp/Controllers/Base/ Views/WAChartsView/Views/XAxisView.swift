@@ -1,17 +1,16 @@
 //
-//  YAxisView.swift
+//  XAxisView.swift
 //  WorkOutApp
 //
-//  Created by Slava Havvk on 21.12.2022.
+//  Created by Slava Havvk on 19.03.2023.
 //
 
 import UIKit
 
-final class YAxisView: WABaseView {
+final class XAxisView: WABaseView {
     
     private let stackView: UIStackView = {
         let view = UIStackView()
-        view.axis = .vertical
         view.distribution = .equalSpacing
         return view
     }()
@@ -21,13 +20,11 @@ final class YAxisView: WABaseView {
             $0.removeFromSuperview()
         }
         
-        (0...9).reversed().forEach {
+        data.forEach {
             let lable = UILabel()
             lable.font = R.Fonts.helveticaRegular(witch: 9)
             lable.textColor = R.Colors.inActive
-            lable.textAlignment = .center
-            lable.textAlignment = .right
-            lable.text = "\($0 * 10)" // TODO: - Remake to colculated interval
+            lable.text = $0.title.uppercased() // TODO: - Remake to colculated interval
             
             stackView.addArrangedSubview(lable)
         }
@@ -36,7 +33,7 @@ final class YAxisView: WABaseView {
 }
 
 
-extension YAxisView {
+extension XAxisView {
     override func setupViews() {
         super.setupViews()
         

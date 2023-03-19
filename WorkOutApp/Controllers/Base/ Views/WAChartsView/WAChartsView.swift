@@ -16,8 +16,14 @@ extension WAChartsView {
 
 final class WAChartsView: WABaseView {
      
+    private let yAxisView = YAxisView()
+    private let xAxisView = XAxisView()
+    
+    private let chartView = UIView() // WAChartView
+    
     func configure(with data: [WAChartsView.Data]) {
-        
+        yAxisView.configure(with: data)
+        xAxisView.configure(with: data)
 
     }
 }
@@ -26,25 +32,35 @@ final class WAChartsView: WABaseView {
 extension WAChartsView {
     override func setupViews() {
         super.setupViews()
-        
-//        setupView(stackView)
+        setupView(yAxisView)
+        setupView(xAxisView)
+        setupView(chartView)
     }
         
     override func constaintViews() {
         super.constaintViews()
         
-//        NSLayoutConstraint.activate([
-//            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-//            stackView.topAnchor.constraint(equalTo: topAnchor),
-//            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-//            stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
-//
-//        ])
+        NSLayoutConstraint.activate([
+            yAxisView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            yAxisView.topAnchor.constraint(equalTo: topAnchor),
+            yAxisView.bottomAnchor.constraint(equalTo: xAxisView.topAnchor, constant:  -12),
+            
+            xAxisView.leadingAnchor.constraint(equalTo: yAxisView.trailingAnchor, constant:  12),
+            xAxisView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            xAxisView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            chartView.leadingAnchor.constraint(equalTo: yAxisView.trailingAnchor, constant:  12),
+            chartView.topAnchor.constraint(equalTo: topAnchor),
+            chartView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            chartView.bottomAnchor.constraint(equalTo: xAxisView.topAnchor, constant:  -12),
+
+        ])
     }
     
     override func configureApperance() {
         super.configureApperance()
         
         backgroundColor = .clear
+        chartView.backgroundColor = .cyan
     }
 }

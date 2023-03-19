@@ -37,6 +37,7 @@
 		0B89AFB128E9AFCA00AA3326 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B89AFB028E9AFCA00AA3326 /* OverviewController.swift */; };
 		0B89AFB628E9AFCD00AA3326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B89AFB528E9AFCD00AA3326 /* Assets.xcassets */; };
 		0B89AFB928E9AFCD00AA3326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B89AFB728E9AFCD00AA3326 /* LaunchScreen.storyboard */; };
+		0BBC7F8529C7710D00359CE1 /* XAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC7F8429C7710D00359CE1 /* XAxisView.swift */; };
 		0BE57AE828EF518B003D6EE3 /* Date + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE57AE728EF518B003D6EE3 /* Date + ext.swift */; };
 		0BE878982901419D00BDB4C0 /* WABaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE878972901419D00BDB4C0 /* WABaseInfoView.swift */; };
 		0BEF62D62954993D0093054F /* DailyPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF62D52954993D0093054F /* DailyPerformanceView.swift */; };
@@ -75,6 +76,7 @@
 		0B89AFB528E9AFCD00AA3326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B89AFB828E9AFCD00AA3326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B89AFBA28E9AFCD00AA3326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BBC7F8429C7710D00359CE1 /* XAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisView.swift; sourceTree = "<group>"; };
 		0BE57AE728EF518B003D6EE3 /* Date + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + ext.swift"; sourceTree = "<group>"; };
 		0BE878972901419D00BDB4C0 /* WABaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseInfoView.swift; sourceTree = "<group>"; };
 		0BEF62D52954993D0093054F /* DailyPerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPerformanceView.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 		0B891E542954D20A00B65F72 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0BBC7F8429C7710D00359CE1 /* XAxisView.swift */,
 				0B891E572954D3E600B65F72 /* YAxisView.swift */,
 			);
 			path = Views;
@@ -444,6 +447,7 @@
 				0B717EE9295395FC0063834D /* WABarsView.swift in Sources */,
 				0B498F8228E9D126007E15B6 /* ProgressController.swift in Sources */,
 				0B5F7383295394170028C671 /* StepsView.swift in Sources */,
+				0BBC7F8529C7710D00359CE1 /* XAxisView.swift in Sources */,
 				0B891E582954D3E600B65F72 /* YAxisView.swift in Sources */,
 				0BE878982901419D00BDB4C0 /* WABaseInfoView.swift in Sources */,
 				0BEF62D62954993D0093054F /* DailyPerformanceView.swift in Sources */,
