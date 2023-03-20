@@ -18,16 +18,14 @@ final class WAChartsView: WABaseView {
      
     private let yAxisView = YAxisView()
     private let xAxisView = XAxisView()
-    
-    private let chartView = UIView() // WAChartView
+    private let chartView = ChartView()
     
     func configure(with data: [WAChartsView.Data]) {
         yAxisView.configure(with: data)
         xAxisView.configure(with: data)
-
+        chartView.configure(with: data)
     }
 }
-
 
 extension WAChartsView {
     override func setupViews() {
@@ -61,6 +59,5 @@ extension WAChartsView {
         super.configureApperance()
         
         backgroundColor = .clear
-        chartView.backgroundColor = .cyan
     }
 }
