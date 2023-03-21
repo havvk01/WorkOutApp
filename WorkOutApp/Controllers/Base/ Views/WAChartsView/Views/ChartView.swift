@@ -24,7 +24,7 @@ final class ChartView: WABaseView {
     
     func configure(with data: [WAChartsView.Data]) {
         layoutIfNeeded()
-        addDashLine(at: 100)
+        addDashLines()
     }
     
 }
@@ -65,6 +65,13 @@ extension ChartView {
 }
 
 private extension ChartView {
+    
+    func addDashLines(with counts: Int? = nil) {
+        (0..<9).map {CGFloat($0)}.forEach {
+            addDashLine(at: bounds.height / 9 * $0)
+        }
+    }
+    
     func addDashLine(at yPosition: CGFloat) {
         let startPoint = CGPoint(x: 0, y: yPosition)
         let endPoint = CGPoint(x: bounds.width, y: yPosition)
