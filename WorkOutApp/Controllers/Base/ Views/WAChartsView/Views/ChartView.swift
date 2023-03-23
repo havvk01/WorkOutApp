@@ -102,8 +102,10 @@ private extension ChartView {
         
         let chartPath = UIBezierPath()
         chartPath.move(to: points[0])
+        
         points.forEach {
             chartPath.addLine(to: $0)
+            drawChartDot(at: $0)
         }
         
         let chartLayer = CAShapeLayer()
@@ -116,6 +118,20 @@ private extension ChartView {
         chartLayer.lineJoin = .round
         
         layer.addSublayer(chartLayer)
+    }
+    
+    func drawChartDot(at point: CGPoint) {
+        let dotPath = UIBezierPath()
+        dotPath.move(to: point)
+        dotPath.addLine(to: point)
+        
+        let dotLayer = CAShapeLayer()
+        dotLayer.path = dotPath.cgPath
+        dotLayer.strokeColor = R.Colors.active.cgColor
+        dotLayer.lineCap = .round
+        dotLayer.lineWidth = 10
+        
+        layer.addSublayer(dotLayer)
     }
 }
 
