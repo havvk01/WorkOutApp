@@ -22,10 +22,10 @@ final class ChartView: WABaseView {
         return view
     }()
     
-    func configure(with data: [WAChartsView.Data]) {
+    func configure(with data: [WAChartsView.Data], topChartOffset: Int) {
         layoutIfNeeded()
         drawDashLines()
-        drawChart(with: data)
+        drawChart(with: data, topChartOffset: topChartOffset)
     }
     
 }
@@ -67,9 +67,9 @@ extension ChartView {
 
 private extension ChartView {
     
-    func drawDashLines(with counts: Int? = nil) {
-        (0..<9).map {CGFloat($0)}.forEach {
-            drawDashLine(at: bounds.height / 9 * $0)
+    func drawDashLines(with counts: Int = 9) {
+        (0..<counts).map {CGFloat($0)}.forEach {
+            drawDashLine(at: bounds.height / CGFloat(counts) * $0)
         }
     }
     
@@ -89,10 +89,10 @@ private extension ChartView {
         layer.addSublayer(dashLayer)
     }
     
-    func drawChart(with data: [WAChartsView.Data]) {
+    func drawChart(with data: [WAChartsView.Data], topChartOffset: Int) {
         guard let maxValue = data.sorted(by: { $0.value > $1.value}).first?.value else { return }
         let valuePoints = data.enumerated().map { CGPoint(x: CGFloat($0), y: CGFloat($1.value)) }
-        let chartHeight = bounds.height / CGFloat(maxValue + 10)
+        let chartHeight = bounds.height / CGFloat(maxValue + topChartOffset)
         
         let points = valuePoints.map {
             let x = bounds.width / CGFloat(valuePoints.count - 1) * $0.x

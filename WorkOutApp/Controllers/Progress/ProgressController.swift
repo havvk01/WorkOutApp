@@ -73,9 +73,10 @@ extension ProgressController {
                                                 .init(value: 70, title: "Jul"),
                                                 .init(value: 80, title: "Aug"),
                                                 .init(value: 65, title: "Sep"),
-                                                .init(value: 45, title: "Okr"),
+                                                .init(value: 1000, title: "Okr"),
                                                 .init(value: 30, title: "Nov"),
-                                                .init(value: 10, title: "Dec")])
+                                                .init(value: 10, title: "Dec")],
+                                         topChartOffset: 10)
     }
     
     
