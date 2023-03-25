@@ -10,13 +10,8 @@ import UIKit
 class OverviewController: WABaseController {
 
     private let navBar = OverviewNavBar()
-//    private let allWorkOutButton = SecondaryButton()
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view.
-//        
-//    }
 
+    private let header = SectionHeaderView()
 
 }
 
@@ -33,7 +28,13 @@ extension OverviewController {
         NSLayoutConstraint.activate([
             navBar.topAnchor.constraint(equalTo: view.topAnchor),
             navBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            header.topAnchor.constraint(equalTo: navBar.bottomAnchor),
+            header.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  16),
+            header.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            header.heightAnchor.constraint(equalToConstant: 32)
+            
             
         ])
     }
