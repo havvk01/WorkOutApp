@@ -69,7 +69,6 @@ extension OverviewNavBar {
             allWorkOutButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             allWorkOutButton.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -15),
             allWorkOutButton.heightAnchor.constraint(equalToConstant: 28),
-//            allWorkOutButton.widthAnchor.constraint(equalToConstant: 130),
             
             titleLabel.centerYAnchor.constraint(equalTo: addButton.centerYAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: allWorkOutButton.leadingAnchor),

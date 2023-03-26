@@ -20,6 +20,7 @@ extension OverviewController {
         super.setupViews()
         
         view.addSubview(navBar)
+        view.addSubview(header)
     }
     
     override func constaintViews() {
@@ -34,16 +35,20 @@ extension OverviewController {
             header.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  16),
             header.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             header.heightAnchor.constraint(equalToConstant: 32)
-            
-            
         ])
     }
     
     override func configureApperance() {
         super.configureApperance()
         navigationController?.navigationBar.isHidden = true
-        
         navBar.translatesAutoresizingMaskIntoConstraints = false
+        header.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM dd"
+        
+        header.configure(with: dateFormatter.string(from: Date()))
     }
 }
 

@@ -18,8 +18,24 @@ final class SectionHeaderView: UICollectionReusableView {
         return lable
     }()
     
-    func configure(with title: String, andValue value: Int) {
-        self.title.text = title
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setupViews()
+        constaintViews()
+        configureApperance()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(frame: .zero)
+        
+        setupViews()
+        constaintViews()
+        configureApperance()
+    }
+    
+    func configure(with title: String) {
+        self.title.text = title.uppercased()
     }
 }
 

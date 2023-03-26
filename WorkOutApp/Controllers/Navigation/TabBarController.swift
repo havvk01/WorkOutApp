@@ -20,7 +20,7 @@ final class TabBarController: UITabBarController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         configureApperance()
-        switchTo(tab: .progress)
+//        switchTo(tab: .progress)
     }
     
     required init?(coder: NSCoder) {
