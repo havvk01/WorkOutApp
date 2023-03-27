@@ -96,6 +96,13 @@ enum R {
         static var add = UIImage(named: "add_button")
         }
         
+        enum Overview {
+            static let rightArrow  = UIImage(named: "right_arrow")
+            static let checkmarkDone  = UIImage(named: "checkmark_done")
+            static let checkmarkNotDone  = UIImage(named: "checkmark_not_done")
+            
+        }
+        
         enum Session {
             enum Stats {
                 static var averagePace = UIImage(named: "stats_averagePace")
