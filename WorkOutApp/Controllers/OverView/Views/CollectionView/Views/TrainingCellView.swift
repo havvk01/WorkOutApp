@@ -51,8 +51,10 @@ final class TrainingCellView: UICollectionViewCell {
         configureApperance()
     }
     
-    func configure(with title: String) {
-        self.title.text = title.uppercased()
+    func configure(with title: String, subtitle: String, isDone: Bool) {
+        self.title.text = title
+        self.subtitle.text = subtitle
+        checkmarkView.image = isDone ? R.Images.Overview.checkmarkDone : R.Images.Overview.checkmarkNotDone
     }
 }
 
@@ -62,7 +64,6 @@ private extension TrainingCellView {
         setupView(stackView)
         stackView.addArrangedSubview(title)
         stackView.addArrangedSubview(subtitle)
-        setupView(subtitle)
         setupView(rightArrowView)
     }
     
@@ -71,16 +72,22 @@ private extension TrainingCellView {
             checkmarkView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             checkmarkView.centerYAnchor.constraint(equalTo: centerYAnchor),
             checkmarkView.heightAnchor.constraint(equalToConstant: 28),
-            checkmarkView.widthAnchor.constraint(equalToConstant: checkmarkView.heightAnchor),
-            
+            checkmarkView.widthAnchor.constraint(equalTo: checkmarkView.heightAnchor),
+
             stackView.leadingAnchor.constraint(equalTo: checkmarkView.trailingAnchor, constant: 15),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            stackView.trailingAnchor.constraint(equalTo: rightArrowView.leadingAnchor, constant: -15),
             
-            
-            
+            rightArrowView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            rightArrowView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
+            rightArrowView.heightAnchor.constraint(equalToConstant: 12),
+            rightArrowView.widthAnchor.constraint(equalToConstant: 7),
         ])
     }
     
     func configureApperance() {
+        backgroundColor = .white
+        layer.borderWidth = 1
+        layer.borderColor = R.Colors.separator.cgColor
     }
 }
