@@ -11,14 +11,16 @@ class OverviewController: WABaseController {
 
     private let navBar = OverviewNavBar()
 
-    private let header = SectionHeaderView()
-    
-    private let cell = TrainingCellView()
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        cell.roundCorners([.allCorners], radius: 15)
-    }
+    private let collectionView: UICollectionView = {
+       let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
+        
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.showsVerticalScrollIndicator = false
+        view.backgroundColor = .clear
+        
+        return view
+    }()
     
 }
 
@@ -27,8 +29,7 @@ extension OverviewController {
         super.setupViews()
         
         view.addSubview(navBar)
-        view.addSubview(header)
-        view.addSubview(cell)
+        view.addSubview(collectionView)
     }
     
     override func constaintViews() {
@@ -39,15 +40,10 @@ extension OverviewController {
             navBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
-            header.topAnchor.constraint(equalTo: navBar.bottomAnchor),
-            header.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  16),
-            header.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            header.heightAnchor.constraint(equalToConstant: 32),
-
-            cell.topAnchor.constraint(equalTo: header.bottomAnchor),
-            cell.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  16),
-            cell.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            cell.heightAnchor.constraint(equalToConstant: 75)
+            collectionView.topAnchor.constraint(equalTo: navBar.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  16),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
     
@@ -55,18 +51,35 @@ extension OverviewController {
         super.configureApperance()
         navigationController?.navigationBar.isHidden = true
         navBar.translatesAutoresizingMaskIntoConstraints = false
-        header.translatesAutoresizingMaskIntoConstraints = false
-        cell.translatesAutoresizingMaskIntoConstraints = false
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMMM dd"
         
-        header.configure(with: dateFormatter.string(from: Date()))
-        cell.configure(with: "Warm Up Cardio", subtitle: "Stair Climber 10 Minutes", isDone: true)
+//        header.configure(with: dateFormatter.string(from: Date()))
+//        cell.configure(with: "Warm Up Cardio", subtitle: "Stair Climber 10 Minutes", isDone: true)
 //        cell.layoutIfNeeded()
 //        cell.roundCorners([.allCorners], radius: 5)
+        
+        collectionView.register(TrainingCellView.self, forCellWithReuseIdentifier: TrainingCellView.id)
+        collectionView.register(SectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderView.id)
 
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
+    
 }
 
+// MARK: - UICollectionViewDataSource
+extension OverviewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension OverviewController: UICollectionViewDelegateFlowLayout {
+    
+}
 
