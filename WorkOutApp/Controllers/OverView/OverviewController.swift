@@ -14,7 +14,7 @@ struct TraningData {
         let isDone: Bool
     }
     let date: Date
-    let dataSource: [Data]
+    let items: [Data]
     
 }
 
@@ -81,15 +81,15 @@ extension OverviewController {
         collectionView.dataSource = self
         
         dataSource = [
-            .init(date: Date(), dataSource: [.init(title: "Warm Up Cardio", subtitle: "Stair Climber * 10 minutes", isDone: true),
+            .init(date: Date(), items: [.init(title: "Warm Up Cardio", subtitle: "Stair Climber * 10 minutes", isDone: true),
                                              .init(title: "Hight Intensity Cardio", subtitle: "Treadmill * 50 minutes", isDone: false)
             ]),
             
-            .init(date: Date(), dataSource: [.init(title: "Warm Up Cardio", subtitle: "Stair Climber * 10 minutes", isDone: false),
+            .init(date: Date(), items: [.init(title: "Warm Up Cardio", subtitle: "Stair Climber * 10 minutes", isDone: false),
                                              .init(title: "Chest Workout", subtitle: "Bench Press * 3 sets * 10 reps", isDone: false),
                                              .init(title: "Tricep Workout", subtitle: "Overhead Extension * 5 sets * 8 reps", isDone: false)
                 ]),
-            .init(date: Date(), dataSource: [.init(title: "Cardio Interval Workout", subtitle: "Treadmill * 60 minutes", isDone: false)
+            .init(date: Date(), items: [.init(title: "Cardio Interval Workout", subtitle: "Treadmill * 60 minutes", isDone: false)
             ])
         ]
         collectionView.reloadData()
@@ -104,7 +104,7 @@ extension OverviewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        dataSource[section].dataSource.count
+        dataSource[section].items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -113,7 +113,22 @@ extension OverviewController: UICollectionViewDataSource {
             for: indexPath
         ) as? TrainingCellView else { return UICollectionViewCell() }
         
-        cell.configure(with: "Test", subtitle: "Test", isDone: true)
+        let item = dataSource[indexPath.section].items[indexPath.row]
+        
+        let roundedType: CellRoundedType
+        
+        if indexPath.row == 0 && indexPath.row == dataSource[indexPath.section].items.count - 1 {
+            roundedType = .all
+        } else if indexPath.row == 0 {
+            roundedType = .top
+        } else if indexPath.row == dataSource[indexPath.section].items.count - 1 {
+            roundedType = .bottom
+        } else {
+            roundedType = .notRounded
+        }
+            
+        
+        cell.configure(with: item.title, subtitle: item.subtitle, isDone: item.isDone, roundedType: roundedType)
         return cell
     }
     
@@ -124,7 +139,8 @@ extension OverviewController: UICollectionViewDataSource {
             ofKind: kind, withReuseIdentifier: SectionHeaderView.id, for: indexPath
         ) as? SectionHeaderView else { return UICollectionReusableView() }
         
-        view.configure(with: Date())
+        
+        view.configure(with: dataSource[indexPath.section].date)
         return view
     }
     
